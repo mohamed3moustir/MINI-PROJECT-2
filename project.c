@@ -1,3 +1,4 @@
+// Online C compiler to run C program online
 #include <stdio.h>
 struct Contact{
     char nom[100][100];
@@ -9,7 +10,8 @@ int tailler = 0;
 // function 1
 void ajouter_contact();
 // function 2
-nt main() {
+void Afficher_contact();
+int main() {
     struct Contact arg;
     int choix;
    
@@ -28,7 +30,7 @@ nt main() {
        break;
         case 3:
        break;
-        case 4:
+        case 4:Afficher_contact();
        break;
         case 5:
        break;
@@ -52,7 +54,21 @@ void ajouter_contact(){
      printf("enter  telephone\t");
     scanf(" %[^\n]s",arg.Num_telephone[i]);
 }
-} 
+}
+void Afficher_contact(){
+    for(int i=0;i<tailler;i++){
+    printf("nom est %s ||email est %s  ||telephone %s  \n",arg.nom[i],arg.email[i],arg.Num_telephone[i]);
+    
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
