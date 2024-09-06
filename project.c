@@ -77,22 +77,29 @@ void  Modifier_contact() {
     char verifie_nom[100];
     printf("enter nom personne you want to Modifier\t");
     scanf(" %[^\n]s",&verifie_nom);
+
     for(int i=0;i<size;i++){
+
     if(strcmp(verifie_nom,arg[i].nom) == 0 ){
+
      printf("enter nom personne\t");
     scanf(" %[^\n]s",&arg[i].nom);
      printf("enter email\t");
     scanf(" %[^\n]s",&arg[i].email);
      printf("enter  telephone\t");
     scanf(" %[^\n]s",&arg[i].Num_telephone);
- printf("____________________________________________________________________________________________________________\n");
-    }
+    printf("____________________________________________________________________________________________________________\n");
+    } else{
+					printf(" Nom n est pas trouve dans les contacts\n");
+}
    
 }
+				
 }
 
 void Afficher_contact(){
     for(int i=0;i<size;i++){
+
     printf("nom est %s ||email est %s  ||telephone %s  \n",arg[i].nom,arg[i].email,arg[i].Num_telephone);
 
     }
@@ -114,7 +121,7 @@ void Supprimer_contact(){
 					size--;
 
 				}else{
-					printf(" le nom incrouvale\n");
+					printf(" Nom n est pas trouve dans les contacts\n");
 				}
  printf("____________________________________________________________________________________________________________\n");
 	}
@@ -131,8 +138,13 @@ void Rechercher_contact(){
     printf("nom est %s ||email est %s  ||telephone %s  \n",arg[i].nom,arg[i].email,arg[i].Num_telephone);
      printf("____________________________________________________________________________________________________________\n");
     
-    }
+    }else
+    printf(" Nom n est pas trouve dans les contacts\n");
 
+}
+
+
+}
 }
 
 
